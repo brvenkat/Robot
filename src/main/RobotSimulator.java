@@ -5,13 +5,17 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
-import java.util.regex.Pattern;
 
 public class RobotSimulator {
-	   private static final Pattern WHITESPACE_PATTERN = Pattern.compile("\\s+");
-	   // Can be improved if we have different versions for Robot Manager
+	   /**
+	    * Was thinking of using a factory pattern that returns different implementations for Robot but it might be an overkill for this
+	    * use case particularly when we do not know about other implementations.
+	    */
 	   private static Robot r  = new RobotManager(5, 5);
 	   public static void main(String[] args) throws Exception{
+		   /**
+		    * Read from the file and pass the commands read onto a helper function
+		    */
 		   BufferedReader br = null;
 		   String currentLine;
 		   RobotSimulator rs = new RobotSimulator();
@@ -37,6 +41,11 @@ public class RobotSimulator {
 				}
 			}
 	   }
+	   
+	   /**
+	    * This function handles the different commands that are read from file and instructs the robot manager to act accordingly
+	    * @param command
+	    */
 	   
 	   private void handleRobot(String command) {
 		   if (command.contains("PLACE")) {
