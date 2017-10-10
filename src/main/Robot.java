@@ -6,6 +6,4 @@ public interface Robot {
 	public void left();
 	public void right();
 	public void report();
-	public int getRow();
-	public int getColumn();
 }
