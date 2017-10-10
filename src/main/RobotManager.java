@@ -12,9 +12,9 @@ public class RobotManager implements Robot{
 	 * Was thinking of having a Robot class by itself but given that functionality is not too complex, 
 	 * thought i will just have a single class to manage all robot moves
 	 */
-	private Coordinates coordinates;
+	private Table coordinates;
 	private boolean hasBeenPlaced;
-	public RobotManager(Coordinates c) {
+	public RobotManager(Table c) {
 		this.coordinates = c;
 	}
 	

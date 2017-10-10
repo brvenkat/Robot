@@ -3,12 +3,12 @@ package test;
 import org.junit.Assert;
 import org.junit.Test;
 
-import main.Coordinates;
+import main.Table;
 import main.Direction;
 
-public class CoordinatesTest {
+public class TableTest {
 
-	Coordinates c = new Coordinates(5, 5);
+	Table c = new Table(5, 5);
 	@Test
 	public void shouldNotPlaceRobot() {
 		c.set(6, 6, "WEST");

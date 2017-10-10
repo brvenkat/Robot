@@ -1,13 +1,13 @@
 package main;
 
-public class Coordinates {
+public class Table {
 	private int MAXROWSIZE;
 	private int MAXCOLUMNSIZE;
 	private int currentRow;
 	private int currentColumn;
 	private Direction orientation;
 	
-	public Coordinates(int rowSize, int columnSize) {
+	public Table(int rowSize, int columnSize) {
 			this.MAXROWSIZE = rowSize;
 			this.MAXCOLUMNSIZE = columnSize;
 			this.currentRow = -1;

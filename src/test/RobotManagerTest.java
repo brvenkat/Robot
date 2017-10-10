@@ -3,7 +3,7 @@ package test;
 import org.junit.Assert;
 import org.junit.Test;
 
-import main.Coordinates;
+import main.Table;
 import main.Robot;
 import main.RobotManager;
 
@@ -14,7 +14,7 @@ import main.RobotManager;
 public class RobotManagerTest {
 
 	Robot r;
-	Coordinates c = new Coordinates(5, 5);
+	Table c = new Table(5, 5);
 	@Test
 	public void shouldPlaceInCell() {
 		r = new RobotManager(c);
@@ -88,7 +88,7 @@ public class RobotManagerTest {
 	
 	@Test
 	public void shouldNotFallOffTable() {
-		c = new Coordinates(2, 2);
+		c = new Table(2, 2);
 		r = new RobotManager(c);
 		r.place(0, 0, "NORTH");
 		r.move();
@@ -100,7 +100,7 @@ public class RobotManagerTest {
 	
 	@Test
 	public void shouldNotMoveOutsideTable() {
-		c = new Coordinates(2, 2);
+		c = new Table(2, 2);
 		r = new RobotManager(c);
 		r.place(3, 3, "NORTH");
 		r.move();

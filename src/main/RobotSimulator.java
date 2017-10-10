@@ -11,7 +11,7 @@ public class RobotSimulator {
 	    * Was thinking of using a factory pattern that returns different implementations for Robot but it might be an overkill for this
 	    * use case particularly when we do not know about other implementations.
 	    */
-	   private static Coordinates c = new Coordinates(5, 5);
+	   private static Table c = new Table(5, 5);
 	   private static Robot r  = new RobotManager(c);
 	   public static void main(String[] args) throws Exception{
 		   /**
